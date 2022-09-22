@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/component: back
+    app.kubernetes.io/name: spring-server
+    app.kubernetes.io/part-of: springServer
+  name: spring-server
+  namespace: nest-http
+spec:
+  ports:
+    - nodePort: 32760
+      port: 8090
+      targetPort: 8090
+  selector:
+    app.kubernetes.io/component: back
+    app.kubernetes.io/name: spring-server
+    app.kubernetes.io/part-of: springServer
+  type: NodePort

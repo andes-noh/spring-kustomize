@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/component: back
+    app.kubernetes.io/name: spring-server
+    app.kubernetes.io/part-of: springServer
+  name: spring-server
+  namespace: nest-http
+spec:
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: back
+      app.kubernetes.io/name: spring-server
+      app.kubernetes.io/part-of: springServer
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: back
+        app.kubernetes.io/name: spring-server
+        app.kubernetes.io/part-of: springServer
+    spec:
+      containers:
+        - image: andesnoh/spring-test:ae257b7e
+          name: spring
+          ports:
+            - containerPort: 8090
+          resources:
+            limits:
+              cpu: "1"
+              memory: 512M

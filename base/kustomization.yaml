@@ -1,0 +1,5 @@
+resources:
+- Deployment.spring-server.k8s.yaml
+- Service.spring-server.k8s.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
