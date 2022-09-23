@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
 - name: andesnoh/spring-test
-  newTag: adc1def2
+  newTag: "77056e11"
 resources:
 - ../../base
