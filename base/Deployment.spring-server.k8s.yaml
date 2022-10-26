@@ -22,7 +22,7 @@ spec:
         app.kubernetes.io/part-of: springServer
     spec:
       containers:
-        - image: andesnoh/spring-test:ae257b7e
+        - image: 942083365966.dkr.ecr.ap-northeast-2.amazonaws.com/spring-demo:7551aa70
           name: spring
           ports:
             - containerPort: 8090
